@@ -5,3 +5,4 @@
 export * from './lib/directives/lib-highlight.directive';
 export * from './lib/lib.component';
 export * from './lib/lib.module';
+export * from './lib/lib.service';
