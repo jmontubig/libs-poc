@@ -8,6 +8,7 @@ import { LibModule } from 'lib';
   imports: [
     LibModule
   ],
-  exports: [Lib2Component]
+  exports: [Lib2Component],
+  providers: []
 })
 export class Lib2Module { }

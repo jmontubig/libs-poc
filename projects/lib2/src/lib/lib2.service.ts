@@ -6,4 +6,8 @@ import { Injectable } from '@angular/core';
 export class Lib2Service {
 
   constructor() { }
+
+  displayLog() {
+    console.log('I am from lib2!!');
+  }
 }
