@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { LibComponent } from './lib.component';
 import { LibHighlightDirective } from './directives/lib-highlight.directive';
+import { LibService } from './lib.service';
 
 
 

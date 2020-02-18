@@ -8,6 +8,6 @@ export class LibService {
   constructor() { }
 
   test() {
-    console.log('From Lib 1');
+    console.log('From Lib 1 Service');
   }
 }
