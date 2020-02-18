@@ -129,6 +129,11 @@
       "root": "projects/lib",
       "sourceRoot": "projects/lib/src",
       "prefix": "lib",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
@@ -169,6 +174,11 @@
       "root": "projects/lib2",
       "sourceRoot": "projects/lib2/src",
       "prefix": "lib",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
