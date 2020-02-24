@@ -11,7 +11,7 @@
     "build:lib:watch": "ng build --project lib --watch",
     "build:lib2:watch": "ng build --project lib2 --watch",
     "release": "standard-version",
-    "copy:npmrc": "xcopy \".npmrc\" \"dist/lib\" /K /D /H && xcopy \".npmrc\" \"dist/lib2\" /K /D /H",
+    "copy:npmrc": "xcopy \"src\\.npmrc\" \"dist\\lib\" /K /D /H && xcopy \"src\\.npmrc\" \"dist\\lib2\" /K /D /H",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
