@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.4](https://github.com/jmontubig/libs-poc/compare/lib2@0.1.3...lib2@0.1.4) (2020-02-25)
+
 ### [0.1.3](https://github.com/jmontubig/libs-poc/compare/lib2@0.1.2...lib2@0.1.3) (2020-02-25)
 
 ### [0.1.2](https://github.com/jmontubig/libs-poc/compare/lib2@0.1.1...lib2@0.1.2) (2020-02-25)
