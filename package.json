@@ -10,7 +10,7 @@
     "build:lib2": "ng build --project lib2  --prod",
     "build:lib:watch": "ng build --project lib --watch",
     "build:lib2:watch": "ng build --project lib2 --watch",
-    "bump": "npm run release:lib && npm run release:lib2",
+    "bump": "npm run bump:lib && npm run bump:lib2",
     "bump:lib": "cd projects/lib && standard-version",
     "bump:lib2": "cd projects/lib && standard-version",
     "copy:npmrc": "xcopy \"src\\.npmrc\" \"dist\\lib\" /K /D /H && xcopy \"src\\.npmrc\" \"dist\\lib2\" /K /D /H",
