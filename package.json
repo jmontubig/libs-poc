@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "npm run build:lib && npm run build:lib2",
+    "build": "npm run build:lib && npm run build:lib2 && npm run copy:changelogs",
     "build:prod": "npm run build:lib && npm run build:lib2",
     "build:lib": "ng build --project lib --prod ",
     "build:lib2": "ng build --project lib2  --prod",
@@ -13,7 +13,7 @@
     "bump": "npm run bump:lib && npm run bump:lib2",
     "bump:lib": "cd projects/lib && standard-version",
     "bump:lib2": "cd projects/lib && standard-version",
-    "copy:npmrc": "xcopy \"src\\.npmrc\" \"dist\\lib\" /K /D /H && xcopy \"src\\.npmrc\" \"dist\\lib2\" /K /D /H",
+    "copy:changelogs": "xcopy \"projects\\lib\\.CHANGELOG.md\" \"dist\\lib\" /K /D /H && xcopy \"projects\\lib2\\.CHANGELOG.md\" \"dist\\lib2\" /K /D /H",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
