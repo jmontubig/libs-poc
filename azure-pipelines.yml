@@ -1,8 +1,7 @@
 trigger:
   tags:
     include:
-    - lib@*
-    - lib2@*
+    - lib*
 
 pool:
   vmImage: 'ubuntu-latest'
