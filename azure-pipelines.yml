@@ -1,0 +1,58 @@
+trigger:
+  tags:
+    include:
+    - lib@*
+    - lib2@*
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: Npm@1
+  displayName: 'npm install'
+  inputs:
+    verbose: false
+    customRegistry: useFeed
+    customFeed: '74cb5599-d87c-4f09-9021-17ca748f08b8/6d4132f2-a6fb-4f28-8d7c-e354509fbd45'
+
+- task: Npm@1
+  displayName: 'npm build'
+  inputs:
+    command: custom
+    verbose: false
+    customCommand: 'run build'
+- task: CopyFiles@2
+  displayName: 'Copy Lib Changelog'
+  inputs:
+    SourceFolder: projects/lib
+    Contents: .CHANGELOG.md
+    TargetFolder: dist/lib
+    OverWrite: true
+
+- task: CopyFiles@2
+  displayName: 'Copy Lib2 Changelog'
+  inputs:
+    SourceFolder: projects/lib2
+    Contents: .CHANGELOG.md
+    TargetFolder: dist/lib2
+    OverWrite: true
+
+- task: Npm@1
+  displayName: 'npm publish lib'
+  inputs:
+    command: custom
+    workingDir: dist/lib
+    verbose: false
+    customCommand: publish
+    customRegistry: useFeed
+    customFeed: '74cb5599-d87c-4f09-9021-17ca748f08b8/6d4132f2-a6fb-4f28-8d7c-e354509fbd45'
+
+- task: Npm@1
+  displayName: 'npm publish lib2'
+  inputs:
+    command: custom
+    workingDir: dist/lib2
+    verbose: false
+    customCommand: publish
+    customRegistry: useFeed
+    customFeed: '74cb5599-d87c-4f09-9021-17ca748f08b8/6d4132f2-a6fb-4f28-8d7c-e354509fbd45'
