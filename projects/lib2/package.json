@@ -1,6 +1,6 @@
 {
   "name": "lib2",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "peerDependencies": {
     "@angular/common": "^9.0.1",
     "@angular/core": "^9.0.1",
